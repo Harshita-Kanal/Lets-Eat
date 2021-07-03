@@ -3,15 +3,15 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrum
 import {Link} from 'react-router-dom' ;
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
-
+import { DISHES } from '../shared/dishes'
 function RenderMenuItem({dish, onClick}){
 return(
-    <Card>
+    <Card className = "mycard" >
         <Link to = {`/menu/${dish.id}`} >
 
-            <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
+            <CardImg width="100%" src={dish.image} alt={dish.name} />
             <CardImgOverlay >
-                <CardTitle>{dish.name}</CardTitle>
+                <CardTitle  className = "myImage" >{dish.name}</CardTitle>
             </CardImgOverlay>
         </Link>
     </Card>
@@ -21,7 +21,7 @@ return(
 
 const Menu = (props) => { 
       
-        const menu = props.dishes.dishes.map( (dish) => {
+        const menu = DISHES.map( (dish) => {
             return (
                 <div  className="col-12 col-md-5 m-1">
                    <RenderMenuItem dish = {dish} onClick = {props.onClick}/>
@@ -29,27 +29,7 @@ const Menu = (props) => {
             );
         });
 
-    if (props.dishes.isLoading) {
-        return (
-            <div className="container">
-                <div className="row">
-                    <Loading />
-                </div>
-            </div>
-        );
-    }
-    else if (props.dishes.errMess) {
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <h4>{props.dishes.errMess}</h4>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    else
+   
         return(       
             <div className = "container">
                 <div className="row">
@@ -62,7 +42,7 @@ const Menu = (props) => {
                     <h3>Menu</h3>
                     <hr />
                 </div>
-                <div className = "row">
+                <div className = "row title">
              
                         {menu}
             

@@ -70,7 +70,7 @@ render(){
                         </Nav>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
+                                <Button className = "top-btn" outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                             </NavItem>
                         </Nav>
                     </Collapse>
@@ -78,15 +78,18 @@ render(){
             </Navbar>
             <Jumbotron>
                 <div className= "container">
+                <h1 className = "pop ml-2 ">Ristorante con Fusion</h1>
+
                     <div className = "row row-header">
                         <div className = "col-12 col-sm-6">
-                            <h1>Ristorante con Fusion</h1>
                             <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking
                                creations will tickle your culinary senses!</p>   
                         </div>
                     </div>
                 </div>
             </Jumbotron>
+            <br/>
+            <br/>
             <Modal isOpen={this.state.isModalOpen}
              toggle = {this.toggleModal} >
                 <ModalHeader>Login</ModalHeader>
