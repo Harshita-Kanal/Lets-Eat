@@ -1,10 +1,8 @@
 ![Lets-Eat](https://socialify.git.ci/Harshita-Kanal/lets-eat/image?description=1&font=Rokkitt&language=1&owner=1&pattern=Charlie%20Brown&stargazers=1&theme=Light)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3389e011-4eec-4c0e-8be7-b803db259097/deploy-status)](https://app.netlify.com/sites/the-food-app-template/deploys)
 ## Try it out
-Deployed on Netlify: https://the-food-app-template.netlify.app/
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Deployed on Netlify: https://the-food-app-template.netlify.app/
 
 ## Available Scripts
 
